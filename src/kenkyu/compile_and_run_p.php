@@ -1,4 +1,7 @@
 <?php
+
+
+//phpのforkを使った処理、xamppの影響でできない
 function compile_and_run($program, $input){
     if (!is_dir("Program")) {
         mkdir("Program", 0777, true);

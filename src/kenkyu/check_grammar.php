@@ -42,7 +42,7 @@ function checkGrammar($token_parenthese_objects){//文法チェック
                             continue 2;
                         }
                     }else if($grammars[$j]=="ag"){
-                        if(!isset($token_parenthese_objects[$i+$j+$cnt])||substr($token_parenthese_objects[$i+$j+$cnt]->type, 0, 2) == "ag"){
+                        if(!isset($token_parenthese_objects[$i+$j+$cnt])||substr($token_parenthese_objects[$i+$j+$cnt]->type, 0, 2) != "ag"){
                             continue 2;
                         }
                     }
