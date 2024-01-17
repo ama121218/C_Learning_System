@@ -14,7 +14,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["program1"])) {//入力フォームが空ではない時
         $program1 = $_POST["program1"];//入力されたプログラムを保存
         $input = $_POST["input"];
-        $error_messages = array();//空の配列を代入
         require_once './compile_and_run.php';//コンパイルプログラムファイルの読み込み
         $compileError_executionResult = compile_and_run($program1, $input);
         if (strpos($compileError_executionResult, "Compile error:") !== false) {
